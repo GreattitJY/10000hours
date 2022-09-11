@@ -27,3 +27,164 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
+
+/* 전체 가운데 정렬 및 폰트 일괄 적용 */
+
+.wrapper {
+    width: 500px;
+    background-color: #5B2386;
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    font-size:14px;
+    line-height: 24px;
+    color: white;
+}
+
+/* header 부분 : 1만 시간의 법칙 이미지와 설명*/
+
+.tit .rule {
+    position: relative;
+    top: 50px;
+    width: 350px;
+}
+
+.tit .clock {
+    position: relative;
+    bottom: 75px;
+    width: 160px;
+}
+
+.tit .sub {
+    position: relative;
+    bottom: 50px;
+    color: #F5DF4D;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 23px;
+}
+
+.tit .def strong {
+    font-family: 'GmarketSansBold';
+    font-size: 18px;
+}
+
+.tit .def {
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+}
+
+.tit .def strong {
+    font-family: 'GmarketSansBold';
+    font-size: 14px;
+
+}
+.tit .quot {
+    position:relative;
+    bottom: 50px;
+    width: 320px;
+}
+
+/* main 부분 : 훈련 시간을 입력받아 결과 표시 */
+
+.input { 
+    position:relative;
+    top: 30px;
+}
+
+/* Attribue Selectors [] */
+input[type=text] {
+    border:1px solid #5B2386;
+    border-radius: 7px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-family: 'GmarketSansMedium';
+    margin: 7px;
+}
+
+/* Pseudo Element :: */
+input::placeholder {
+    color:#BABCBE
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #FCEE21;
+    border-color:#5B2386;
+    border-radius: 56px;
+    font-family: 'GmarketSansBold';
+    font-size: 14px;
+    color: #5B2386;
+}
+
+.submit {
+    position: relative;
+    left: 20px;
+    top: 40px;
+}
+
+.click {
+    position: relative;
+    top: 70px;
+    left: 20px;
+    width: 40px;
+}
+
+/* 결과 확인하는 부분 */
+
+.cal .output {
+    position: relative;
+    line-height: 35px;
+    top: 150px;
+}
+
+.output strong {
+    font-family: 'GmarketSansBold';
+    font-size: 30px;
+    margin: 5px;
+}
+
+.go {
+    position: relative;
+    top: 70px;
+    right: 5px;
+
+}
+
+.share {
+    background-color: white;
+    text-decoration-line: none;
+    position: relative;
+    top: 70px;
+}
+
+.blind {
+    display : none;
+}
+
+/* 회사 로고와 저작권 표시 */
+.cont-footer {
+    position : relative;
+    top: 300px;
+    display: flow-root;
+}
+
+.logo {
+    position: relative;
+    bottom: 10px;
+    width: 80px;
+}
+
+.copyright {
+    font-family: 'Noto Sans KR';
+    font-size: 10px;
+    line-height: 17px;
+    margin-bottom: 50px;
+}
+
+/* 모달 부분 */
+
+.modal {
+    display: none;
+}
