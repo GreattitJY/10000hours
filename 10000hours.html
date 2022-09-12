@@ -8,26 +8,33 @@
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/10000hours.css" />
     </head>
+    <!-- bem 네이밍도 같이 연습해보자 -->
     <body class="wrapper">
         <!-- 1만 시간의 법칙 로고와 정의 부분 -->
-        <header class="tit">
-            <h1>
-                <img class="rule" src="./img/title.png" alt="1만 시간의 법칙" />
-                <img class="clock" src="./img/clock.png" alt="" />
+        <header class="title">
+            <h1 class="title__logo)">
+                <img
+                    class="title__logo-letter"
+                    src="./img/title.png"
+                    alt="1만 시간의 법칙"
+                />
+                <img class="title__logo-drawing" src="./img/clock.png" alt="" />
             </h1>
-            <p class="sub">"연습은 어제의 당신보다 당신을 더 낫게 만든다"</p>
-            <p class="def">
+            <p class="title__text-desc">
+                "연습은 어제의 당신보다 당신을 더 낫게 만든다"
+            </p>
+            <p class="title__text-def">
                 <strong>1만 시간의 법칙</strong>은 <br />
                 어떤 분야의 전문가가 되기 위해서는<br />
                 최소한 1만 시간의 훈련이 필요하다는 법칙이다.
             </p>
-            <img class="quot" src="./img/quotes.png" alt="" />
+            <img class="title__img-quot" src="./img/quotes.png" alt="" />
         </header>
         <!-- 훈련 시간 보여주는 부분-->
         <main class="cal">
             <h2 class="blind">훈련 시간 계산기</h2>
-            <form class="input">
-                <p>
+            <form>
+                <p class="cal__input">
                     나는
                     <input type="text" placeholder="예)프로그래밍" required />
                     전문가가 될 것이다. <br />
@@ -35,26 +42,28 @@
                     <input type="text" placeholder="예)5시간" required />
                     시간씩 훈련할 것이다.
                 </p>
-                <button class="btn submit">
+                <button class="btn--submit btn--submit-time">
                     나는 며칠동안 훈련을 해야 1만 시간이 될까?
                 </button>
-                <img class="click" src="./img/click.png" alt="" />
+                <img class="cal__img--click" src="./img/click.png" alt="" />
             </form>
-            <section class="output">
+            <section>
                 <h3 class="blind">결과 확인</h3>
-                <p>
+                <p class="cal__output">
                     당신은
                     <strong>프로그래밍</strong> 전문가가 되기 위해서
                     <br />
                     대략 <strong>5110</strong>일 이상 훈려하셔야 됩니다! :)
                 </p>
-                <button class="btn go">훈련하러 가기 GO!GO!</button>
-                <a class="btn share" href="">공유하기</a>
+                <button class="btn--submit btn--submit-go">
+                    훈련하러 가기 GO!GO!
+                </button>
+                <a class="btn--submit btn--submit-share" href="">공유하기</a>
             </section>
         </main>
-        <footer class="cont-footer">
-            <img class="logo" src="./img/logo.png" alt="" />
-            <p class="copyright">
+        <footer class="corp-info">
+            <img class="corp-info__logo" src="./img/logo.png" alt="" />
+            <p class="corp-info__copyright">
                 ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에
                 있습니다.<br />
                 수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
