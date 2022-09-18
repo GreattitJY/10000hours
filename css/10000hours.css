@@ -24,167 +24,204 @@
     font-style: normal;
     font-weight: 400;
     src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
-/* 전체 가운데 정렬 및 폰트 일괄 적용 */
+/* 배경 색 지정 및 폰트 일괄 적용 */
 
-.wrapper {
-    width: 500px;
+body {
     background-color: #5B2386;
-    margin: 50px auto;
-    text-align: center;
+}
+
+:root {
     font-family: 'GmarketSansMedium';
-    font-size:14px;
-    line-height: 24px;
     color: white;
 }
 
-/* header 부분 : 1만 시간의 법칙 이미지와 설명*/
+/* 타이틀 : 1만 시간의 법칙 이미지와 텍스트 */
 
-.title__logo-letter {
-    position: relative;
-    top: 50px;
-    width: 350px;
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px 0 -180px;
 }
 
-.title__logo-drawing {
-    position: relative;
-    bottom: 75px;
-    width: 160px;
+.title__img-letter {
+    width: 530px;
+    height: 112px;
+    margin-bottom: 130px;
 }
 
-.title__text-desc{
+.title::after {
+    content: '';
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/clock.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-    bottom: 50px;
+    bottom: 350px;
+    z-index: -1;
+}
+
+.title__text {
     color: #F5DF4D;
     font-family: 'OTEnjoystoriesBA';
-    font-size: 23px;
+    font-size: 36px;
 }
 
-.title__text-def {
-    position: relative;
-    top: 10px;
-    font-size: 12px;
+/* 훈련 시간을 입력받아 결과 표시 */
+
+.cal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.title__text-def strong {
-    font-family: 'GmarketSansBold';
+.cal__text {
     font-size: 18px;
+    text-align: center;
 }
 
-.title__img-quot {
-    position:relative;
-    bottom: 50px;
-    width: 320px;
+.cal__text strong {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
 }
 
-/* main 부분 : 훈련 시간을 입력받아 결과 표시 */
-
-.cal__input { 
-    position:relative;
+.cal__text::before {
+    content: '';
+    width: 600px;
+    height: 30px;
+    background-image: url(../img/quotes.png);
+    background-repeat: no-repeat;
+    position: relative;
     top: 30px;
+    left: 55px;
+    display: block;
+}
+
+.cal__text--input {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 80px;
 }
 
 /* Attribue Selectors [] */
-.cal__input input[type=text] {
-    border:1px solid #5B2386;
+.cal__text--input input[type=text] {
+    border: 1px solid #5B2386;
     border-radius: 7px;
-    width: 150px;
-    height: 40px;
+    width: 228px;
+    height: 58px;
     text-align: center;
     font-family: 'GmarketSansMedium';
-    margin: 7px;
+    margin: 10px;
+    font-size: 24px;
 }
 
 /* Pseudo Element :: */
-.cal__input input::placeholder {
-    color:#BABCBE
+.cal__text--input input::placeholder {
+    color: #BABCBE;
 }
 
 .btn--submit {
 
-    padding: 10px 20px;
+    padding: 20px 50px;
     background-color: #FCEE21;
-    border-color:#5B2386;
+    border-color: #5B2386;
     border-radius: 56px;
     font-family: 'GmarketSansBold';
-    font-size: 14px;
+    font-size: 24px;
     color: #5B2386;
 }
 
-.btn--submit-time {
-    position:relative;
-    left: 20px;
-    top: 90px;
+.btn--submit-result {
+    margin: 130px;
+    /* position: relative; */
+    /* left: 20px; */
+    /* top: 90px; */
 }
 
 .cal__img--click {
     position: relative;
-    top: 120px;
-    left: 20px;
-    width: 40px;
+    right: 130px;
+    top: 50px;
+    transform: rotate(-10deg);
 }
 
 /* 결과 확인하는 부분 */
 
-.cal__output {
-    position: relative;
-    line-height: 35px;
-    top: 150px;
+.cal__text--output {
+    text-align: center;
+    font-size: 24px;
 }
 
-.cal__output strong {
+.cal__text--output strong {
     font-family: 'GmarketSansBold';
-    font-size: 30px;
+    font-size: 72px;
     margin: 5px;
 }
 
-.btn--submit-go {
-    position: relative;
-    top: 190px;
-    right: 5px;
+.btn--anchor-modal {
+    margin: 130px 10px 100px 30px;
 }
 
-.btn--submit-share {
+.btn--anchor-share {
     background-color: white;
     text-decoration-line: none;
-    position: relative;
-    top: 190px;
 }
 
 
 /* 회사 로고와 저작권 표시 */
-.corp-info {
-    position : relative;
-    top: 250px;
-    display: flow-root;
-}
-
-.corp-info__logo {
-    position: relative;
-    bottom: 10px;
-    left: 10px;
-    width: 80px;
-}
-
-.corp-info__copyright {
-    font-family: 'Noto Sans KR';
-    font-size: 10px;
+.copyright {
+    text-align: center;
+    margin: 0px 0px 50px;
+    font-size: 12px;
     line-height: 17px;
-    margin-bottom: 50px;
-    position: relative;
-    left: 5px;
+    font-family: 'Noto Sans KR';
 }
 
-/* 모달 부분 */
-
-.modal {
-    display: none;
+.copyright__logo {
+    margin: 20px;
 }
 
-/* 기타 : 블라인드 처리 */
+/* 모달  */
+
+.modal-licat {
+    width: 950px;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.modal-licat__text {
+    color: #5B2386;
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 100px 0 60px;
+}
+
+.modal-licat__text strong {
+    font-size: 96px;
+}
+
+.modal-licat img {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn__anchor-go {
+    margin: 80px auto;
+    width: fit-content;
+}
+
 .blind {
-    display : none;
+    display: none;
 }
