@@ -39,24 +39,34 @@ body {
     color: white;
 }
 
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
 /* 타이틀 : 1만 시간의 법칙 이미지와 텍스트 */
 
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 200px 0 -180px;
+    margin: 194px 0px -180px;
 }
 
 .title__img-letter {
     width: 530px;
-    height: 112px;
-    margin-bottom: 130px;
+    margin-bottom: 125px;
 }
+
 
 .title::after {
     content: '';
-    width: 250px;
+    width: 220px;
     height: 250px;
     background-image: url(../img/clock.png);
     background-size: cover;
@@ -74,6 +84,10 @@ body {
 
 /* 훈련 시간을 입력받아 결과 표시 */
 
+#box-input {
+    position: relative;
+}
+
 .cal {
     display: flex;
     flex-direction: column;
@@ -83,6 +97,8 @@ body {
 .cal__text {
     font-size: 18px;
     text-align: center;
+    margin-bottom: 78px;
+    line-height: 1.8;
 }
 
 .cal__text strong {
@@ -97,17 +113,14 @@ body {
     background-image: url(../img/quotes.png);
     background-repeat: no-repeat;
     position: relative;
-    top: 30px;
+    top: 55px;
     left: 55px;
     display: block;
 }
 
 .cal__text--input {
-    position: relative;
-    top: 30px;
     text-align: center;
     font-size: 24px;
-    margin-top: 80px;
 }
 
 /* Attribue Selectors [] */
@@ -129,8 +142,9 @@ body {
 
 .btn--submit {
 
-    padding: 20px 50px;
+    padding: 21px 49px 21px 49px;
     background-color: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-color: #5B2386;
     border-radius: 56px;
     font-family: 'GmarketSansBold';
@@ -139,17 +153,12 @@ body {
 }
 
 .btn--submit-result {
-    margin: 130px;
-    /* position: relative; */
-    /* left: 20px; */
-    /* top: 90px; */
+    margin: 115px 0px 145px 95px;
 }
 
 .cal__img--click {
-    position: relative;
-    right: 130px;
-    top: 50px;
-    transform: rotate(-10deg);
+    position: absolute;
+    bottom: 120px;
 }
 
 /* 결과 확인하는 부분 */
@@ -157,16 +166,17 @@ body {
 .cal__text--output {
     text-align: center;
     font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .cal__text--output strong {
     font-family: 'GmarketSansBold';
     font-size: 72px;
-    margin: 5px;
+    margin: 0px 10px;
 }
 
 .btn--anchor-modal {
-    margin: 130px 10px 100px 30px;
+    margin: 110px 10px 130px 30px;
 }
 
 .btn--anchor-share {
@@ -174,28 +184,33 @@ body {
     text-decoration-line: none;
 }
 
-
 /* 회사 로고와 저작권 표시 */
+
 .copyright {
     text-align: center;
-    margin: 0px 0px 50px;
     font-size: 12px;
     line-height: 17px;
     font-family: 'Noto Sans KR';
+    margin-bottom: 70px;
 }
 
 .copyright__logo {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 /* 모달  */
-
 .modal-licat {
-    width: 950px;
-    height: 950px;
+    display: none;
+}
+
+.box-licat {
+    width: 800px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     background-color: white;
+    border-radius: 56px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .modal-licat__text {
@@ -204,7 +219,7 @@ body {
     font-size: 36px;
     line-height: 1.5;
     text-align: center;
-    margin: 100px 0 60px;
+    margin: 76px 0 30px;
 }
 
 .modal-licat__text strong {
@@ -218,10 +233,92 @@ body {
 }
 
 .btn__anchor-go {
-    margin: 80px auto;
+    margin: 74px auto;
     width: fit-content;
 }
 
-.blind {
-    display: none;
+@media (max-width: 820px) {
+
+    .title {
+        margin: 80px 0 -82px;
+    }
+
+    .title__img-letter {
+        width: 250px;
+        height: 53px;
+        margin-bottom: 69px;
+    }
+
+    .title::after {
+        width: 106px;
+        height: 106px;
+        bottom: 175px;
+    }
+
+    .title__text {
+        font-size: 22px;
+        width: 300px
+    }
+
+    .cal__text {
+        font-size: 14px;
+        margin-bottom: 62px;
+    }
+
+    .cal__text strong {
+        font-size: 16px;
+    }
+
+    .cal__text::before {
+        background-size: 300px;
+        left: 150px;
+    }
+
+    .cal__text--input {
+        width: 340px;
+        font-size: 14px;
+    }
+
+    .cal__text--input input[type=text] {
+        font-size: 14px;
+        width: 156px;
+        height: 37px;
+    }
+
+    .btn--submit {
+        width: 241px;
+        height: 68px;
+        font-size: 14px;
+        padding: 17px 36px;
+    }
+
+    .btn--submit-result {
+        margin: 49px 0px 64px 45px;
+        width: 240px;
+        height: 68px;
+        border-radius: 19px;
+    }
+
+    .cal__img--click {
+        width: 50px;
+        bottom: 50px;
+    }
+
+    .cal__text--output {
+        font-size: 14px;
+    }
+
+    .cal__text--output strong {
+        font-size: 24px
+    }
+
+    .btn--anchor-modal {
+        margin: 60px 10px 87px 30px;
+    }
+
+    .copyright {
+        font-size: 9px;
+    }
+
+    /* 모달도 구현해야 함! */
 }
