@@ -49,6 +49,12 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* 타이틀 : 1만 시간의 법칙 이미지와 텍스트 */
 
 .title {
@@ -200,12 +206,20 @@ body {
 
 /* 모달  */
 .modal-licat {
-    display: none;
+    position: fixed;
+    top: 3%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
 }
 
 .box-licat {
-    width: 800px;
-    height: 800px;
+
+    width: 700px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -219,7 +233,7 @@ body {
     font-size: 36px;
     line-height: 1.5;
     text-align: center;
-    margin: 76px 0 30px;
+    margin: 30px 0 30px;
 }
 
 .modal-licat__text strong {
@@ -237,7 +251,7 @@ body {
     width: fit-content;
 }
 
-@media (max-width: 820px) {
+@media screen and (max-width: 820px) {
 
     /* 타이틀 */
     .title {
