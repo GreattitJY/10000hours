@@ -49,12 +49,6 @@ body {
     overflow: hidden;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* 타이틀 : 1만 시간의 법칙 이미지와 텍스트 */
 
 .title {
