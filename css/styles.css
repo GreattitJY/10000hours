@@ -239,6 +239,7 @@ body {
 
 @media (max-width: 820px) {
 
+    /* 타이틀 */
     .title {
         margin: 80px 0 -82px;
     }
@@ -260,6 +261,7 @@ body {
         width: 300px
     }
 
+    /* 입력 받는 부분 */
     .cal__text {
         font-size: 14px;
         margin-bottom: 62px;
@@ -285,6 +287,7 @@ body {
         height: 37px;
     }
 
+    /* 계산하는 버튼  */
     .btn--submit {
         width: 241px;
         height: 68px;
@@ -304,6 +307,7 @@ body {
         bottom: 50px;
     }
 
+    /* 결과 출력 */
     .cal__text--output {
         font-size: 14px;
     }
@@ -316,9 +320,46 @@ body {
         margin: 60px 10px 87px 30px;
     }
 
+    /* 저작권 폰트 */
     .copyright {
         font-size: 9px;
     }
 
-    /* 모달도 구현해야 함! */
+    /* 모달 부분 */
+    .box-licat {
+        width: 330px;
+        height: 500px;
+        border-radius: 30px;
+    }
+
+    .modal-licat__text {
+        margin: 40px 0 10px;
+    }
+
+    .modal-licat__text strong {
+        font-size: 46px;
+    }
+
+    .modal-licat__text strong span {
+        display: none;
+    }
+
+    .modal-licat img {
+        width: 70%;
+    }
+
+    .btn__anchor-go {
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 231px;
+        height: 68px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 13px;
+        line-height: 1.2;
+    }
+
 }
