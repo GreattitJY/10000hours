@@ -123,8 +123,7 @@ body {
     font-size: 24px;
 }
 
-/* Attribue Selectors [] */
-.cal__text--input input[type=text] {
+.cal__text--input input {
     border: 1px solid #5B2386;
     border-radius: 7px;
     width: 228px;
@@ -140,7 +139,7 @@ body {
     color: #BABCBE;
 }
 
-.btn--submit {
+.btn {
 
     padding: 21px 49px 21px 49px;
     background-color: #FCEE21;
@@ -150,9 +149,10 @@ body {
     font-family: 'GmarketSansBold';
     font-size: 24px;
     color: #5B2386;
+    cursor: pointer;
 }
 
-.btn--submit-result {
+.btn-result {
     margin: 115px 0px 145px 95px;
 }
 
@@ -160,6 +160,23 @@ body {
     position: absolute;
     bottom: 120px;
 }
+
+/* 로딩창 */
+.loading {
+    display: none;
+    animation: spinning 5s linear infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* 결과 확인하는 부분 */
 
@@ -175,11 +192,11 @@ body {
     margin: 0px 10px;
 }
 
-.btn--anchor-modal {
+.btn-modal {
     margin: 110px 10px 130px 30px;
 }
 
-.btn--anchor-share {
+.btn-share {
     background-color: white;
     text-decoration-line: none;
 }
@@ -205,9 +222,9 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
-
 }
 
 .box-licat {
@@ -240,9 +257,10 @@ body {
     margin: 0 auto;
 }
 
-.btn__anchor-go {
+.btn-go {
     margin: 74px auto;
     width: fit-content;
+    border: none;
 }
 
 @media screen and (max-width: 820px) {
@@ -289,21 +307,21 @@ body {
         font-size: 14px;
     }
 
-    .cal__text--input input[type=text] {
+    .cal__text--input input {
         font-size: 14px;
         width: 156px;
         height: 37px;
     }
 
     /* 계산하는 버튼  */
-    .btn--submit {
+    .btn {
         width: 241px;
         height: 68px;
         font-size: 14px;
         padding: 17px 36px;
     }
 
-    .btn--submit-result {
+    .btn-result {
         margin: 49px 0px 64px 45px;
         width: 240px;
         height: 68px;
@@ -315,6 +333,7 @@ body {
         bottom: 50px;
     }
 
+
     /* 결과 출력 */
     .cal__text--output {
         font-size: 14px;
@@ -324,9 +343,25 @@ body {
         font-size: 24px
     }
 
-    .btn--anchor-modal {
+    .btn-modal {
         margin: 60px 10px 87px 30px;
+        height: fit-content;
+        width: fit-content;
+        padding: 12px 18px;
+        position: relative;
+        right: 15px;
+
     }
+
+    .btn-share {
+        width: fit-content;
+        height: fit-content;
+        padding: 12px 18px;
+        box-sizing: border-box;
+        position: relative;
+        right: 20px;
+    }
+
 
     /* 저작권 폰트 */
     .copyright {
@@ -356,7 +391,7 @@ body {
         width: 70%;
     }
 
-    .btn__anchor-go {
+    .btn-go {
         margin: 40px auto;
         display: flex;
         flex-direction: column;
