@@ -153,18 +153,19 @@ body {
 }
 
 .btn-result {
-    margin: 115px 0px 145px 95px;
+    margin: 115px 0px 0px 95px;
 }
 
 .cal__img--click {
     position: absolute;
-    bottom: 120px;
+    bottom: -20px;
 }
 
 /* 로딩창 */
 .loading {
     display: none;
-    animation: spinning 5s linear infinite;
+    animation: spinning 1s linear infinite;
+    margin-top: 100px;
 }
 
 @keyframes spinning {
@@ -180,6 +181,11 @@ body {
 
 /* 결과 확인하는 부분 */
 
+.result {
+    display: none;
+    margin-top: 120px;
+}
+
 .cal__text--output {
     text-align: center;
     font-size: 24px;
@@ -193,7 +199,7 @@ body {
 }
 
 .btn-modal {
-    margin: 110px 10px 130px 30px;
+    margin: 110px 10px 0px 30px;
 }
 
 .btn-share {
@@ -208,6 +214,7 @@ body {
     font-size: 12px;
     line-height: 17px;
     font-family: 'Noto Sans KR';
+    margin-top: 100px;
     margin-bottom: 70px;
 }
 
@@ -322,7 +329,7 @@ body {
     }
 
     .btn-result {
-        margin: 49px 0px 64px 45px;
+        margin: 49px 0px 0px 45px;
         width: 240px;
         height: 68px;
         border-radius: 19px;
@@ -330,11 +337,20 @@ body {
 
     .cal__img--click {
         width: 50px;
-        bottom: 50px;
+        bottom: -10px;
     }
 
 
     /* 결과 출력 */
+
+    .result {
+        margin-top: 60px;
+    }
+
+    .loading {
+        margin-top: 60px;
+    }
+
     .cal__text--output {
         font-size: 14px;
     }
@@ -344,7 +360,7 @@ body {
     }
 
     .btn-modal {
-        margin: 60px 10px 87px 30px;
+        margin: 60px 10px 0px 30px;
         height: fit-content;
         width: fit-content;
         padding: 12px 18px;
@@ -362,10 +378,16 @@ body {
         right: 20px;
     }
 
+    /* 로딩 */
+    .loading {
+        width: 100px;
+        height: 100px;
+    }
 
     /* 저작권 폰트 */
     .copyright {
         font-size: 9px;
+        margin-top: 60px;
     }
 
     /* 모달 부분 */

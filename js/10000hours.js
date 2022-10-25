@@ -12,7 +12,7 @@ btnGo.addEventListener("click", () => {
 });
 
 window.onclick = function (event) {
-    if (event.target == mdLicat) {
+    if (event.target === mdLicat) {
         mdLicat.style.display = "none";
     }
 };
@@ -21,9 +21,36 @@ window.onclick = function (event) {
 const loading = document.querySelector(".loading");
 const btnResult = document.querySelector(".btn-result");
 const inputs = document.querySelectorAll("input");
+const result = document.querySelector(".result");
+const form = document.querySelector("#box-input");
+const outputs = document.querySelectorAll(".strong-result");
+
+form.addEventListener("click", (event) => {
+    event.preventDefault();
+});
 
 function calc() {
-    console.log("호출 확인");
+    result.style.display = "none";
+    console.log(outputs[0]);
+    console.log(outputs[1]);
+    if (!(inputs[0].value.trim().length || inputs[1].value.trim().length)) {
+        alert("값을 입력해주세요.");
+        return;
+    }
+
+    if (inputs[1].value <= 0 || inputs[1].value > 24) {
+        alert("시간을 제대로 입력해주세요.");
+        return;
+    }
+
+    console.log("check");
     loading.style.display = "block";
+    setTimeout(function () {
+        loading.style.display = "none";
+        outputs[0].textContent = inputs[0].value;
+        const timeResult = Math.floor(10000 / inputs[1].value);
+        outputs[1].textContent = timeResult;
+        result.style.display = "block";
+    }, 1000);
 }
-btnResult.addEventListener("click", calc());
+btnResult.addEventListener("click", calc);
