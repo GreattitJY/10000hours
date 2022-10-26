@@ -11,11 +11,11 @@ btnGo.addEventListener("click", () => {
     mdLicat.style.display = "none";
 });
 
-window.onclick = function (event) {
+window.addEventListener("click", (event) => {
     if (event.target === mdLicat) {
         mdLicat.style.display = "none";
     }
-};
+});
 
 // 로딩 이미지
 const loading = document.querySelector(".loading");
@@ -31,9 +31,7 @@ form.addEventListener("click", (event) => {
 
 function calc() {
     result.style.display = "none";
-    console.log(outputs[0]);
-    console.log(outputs[1]);
-    if (!(inputs[0].value.trim().length || inputs[1].value.trim().length)) {
+    if (!(inputs[0].value.length || inputs[1].value.length)) {
         alert("값을 입력해주세요.");
         return;
     }
@@ -43,7 +41,6 @@ function calc() {
         return;
     }
 
-    console.log("check");
     loading.style.display = "block";
     setTimeout(function () {
         loading.style.display = "none";
