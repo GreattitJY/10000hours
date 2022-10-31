@@ -1,3 +1,20 @@
+// 링크 공유
+
+const btnShare = document.querySelector(".btn-share");
+
+function shareURL() {
+    navigator.clipboard
+        .writeText(window.location.href)
+        .then(() => {
+            alert("URL이 복사되었습니다");
+        })
+        .catch(() => {
+            alert("URL이 복사에 실패했습니다");
+        });
+}
+
+btnShare.addEventListener("click", shareURL);
+
 // 모달창
 const mdLicat = document.querySelector(".modal-licat");
 const btnModal = document.querySelector(".btn-modal");
