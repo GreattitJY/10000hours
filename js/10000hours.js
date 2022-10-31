@@ -22,17 +22,15 @@ async function shareURL() {
     //         return -1;
     //     });
     // console.log(res);
-}
 
-// function URL() {
-//     navigator.clipboard.writeText(window.location.href)
-//         .then(() => {
-//             alert("URL이 복사되었습니다");
-//         })
-//         .catch(() => {
-//             alert("URL이 복사에 실패했습니다");
-//         });
-// }
+    //     navigator.clipboard.writeText(window.location.href)
+    //         .then(() => {
+    //             alert("URL이 복사되었습니다");
+    //         })
+    //         .catch(() => {
+    //             alert("URL이 복사에 실패했습니다");
+    //         });
+}
 
 btnShare.addEventListener("click", shareURL);
 
