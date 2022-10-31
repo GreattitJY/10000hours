@@ -2,16 +2,37 @@
 
 const btnShare = document.querySelector(".btn-share");
 
-function shareURL() {
-    navigator.clipboard
-        .writeText(window.location.href)
-        .then(() => {
-            alert("URL이 복사되었습니다");
-        })
-        .catch(() => {
-            alert("URL이 복사에 실패했습니다");
-        });
+async function shareURL() {
+    try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("URL이 복사되었습니다");
+    } catch {
+        alert("URL이 복사에 실패했습니다");
+    }
+
+    // async 공부용 주석
+    // const res = await navigator.clipboard
+    //     .writeText(window.location.href)
+    //     .then(() => {
+    //         alert("URL이 복사되었습니다");
+    //         return 1;
+    //     })
+    //     .catch(() => {
+    //         alert("URL이 복사에 실패했습니다");
+    //         return -1;
+    //     });
+    // console.log(res);
 }
+
+// function URL() {
+//     navigator.clipboard.writeText(window.location.href)
+//         .then(() => {
+//             alert("URL이 복사되었습니다");
+//         })
+//         .catch(() => {
+//             alert("URL이 복사에 실패했습니다");
+//         });
+// }
 
 btnShare.addEventListener("click", shareURL);
 
