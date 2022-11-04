@@ -58,7 +58,7 @@ body {
     margin: 194px 0px -180px;
 }
 
-.title__img-letter {
+.img-title {
     width: 530px;
     margin-bottom: 125px;
 }
@@ -76,7 +76,7 @@ body {
     z-index: -1;
 }
 
-.title__text {
+.text-title {
     color: #F5DF4D;
     font-family: 'OTEnjoystoriesBA';
     font-size: 36px;
@@ -88,25 +88,25 @@ body {
     position: relative;
 }
 
-.cal {
+.calc {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cal__text {
+.text-desc {
     font-size: 18px;
     text-align: center;
     margin-bottom: 78px;
     line-height: 1.8;
 }
 
-.cal__text strong {
+.text-desc strong {
     font-family: 'GmarketSansBold';
     font-size: 24px;
 }
 
-.cal__text::before {
+.text-desc::before {
     content: '';
     width: 600px;
     height: 30px;
@@ -118,12 +118,12 @@ body {
     display: block;
 }
 
-.cal__text--input {
+.text-input {
     text-align: center;
     font-size: 24px;
 }
 
-.cal__text--input input {
+.text-input input {
     border: 1px solid #5B2386;
     border-radius: 7px;
     width: 228px;
@@ -134,8 +134,7 @@ body {
     font-size: 24px;
 }
 
-/* Pseudo Element :: */
-.cal__text--input input::placeholder {
+.text-input input::placeholder {
     color: #BABCBE;
 }
 
@@ -156,7 +155,7 @@ body {
     margin: 115px 0px 0px 95px;
 }
 
-.cal__img--click {
+.img-click {
     position: absolute;
     bottom: -20px;
 }
@@ -186,13 +185,13 @@ body {
     margin-top: 120px;
 }
 
-.cal__text--output {
+.text-output {
     text-align: center;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.cal__text--output strong {
+.text-output strong {
     font-family: 'GmarketSansBold';
     font-size: 72px;
     margin: 0px 10px;
@@ -218,7 +217,7 @@ body {
     margin-bottom: 70px;
 }
 
-.copyright__logo {
+.copyright .img-logo {
     margin-bottom: 20px;
 }
 
@@ -244,7 +243,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.modal-licat__text {
+.text-modal {
     color: #5B2386;
     font-family: 'OTEnjoystoriesBA';
     font-size: 36px;
@@ -253,7 +252,7 @@ body {
     margin: 30px 0 30px;
 }
 
-.modal-licat__text strong {
+.text-modal strong {
     font-size: 96px;
 }
 
@@ -276,7 +275,7 @@ body {
         margin: 80px 0 -82px;
     }
 
-    .title__img-letter {
+    .img-title {
         width: 250px;
         height: 53px;
         margin-bottom: 69px;
@@ -288,32 +287,32 @@ body {
         bottom: 175px;
     }
 
-    .title__text {
+    .text-title {
         font-size: 22px;
         width: 300px
     }
 
     /* 입력 받는 부분 */
-    .cal__text {
+    .text-desc {
         font-size: 14px;
         margin-bottom: 62px;
     }
 
-    .cal__text strong {
+    .text-desc strong {
         font-size: 16px;
     }
 
-    .cal__text::before {
+    .text-desc::before {
         background-size: 300px;
         left: 150px;
     }
 
-    .cal__text--input {
+    .text-input {
         width: 340px;
         font-size: 14px;
     }
 
-    .cal__text--input input {
+    .text-input input {
         font-size: 14px;
         width: 156px;
         height: 37px;
@@ -334,7 +333,7 @@ body {
         border-radius: 19px;
     }
 
-    .cal__img--click {
+    .img-click {
         width: 50px;
         bottom: -10px;
     }
@@ -350,11 +349,11 @@ body {
         margin-top: 60px;
     }
 
-    .cal__text--output {
+    .text-output {
         font-size: 14px;
     }
 
-    .cal__text--output strong {
+    .text-output strong {
         font-size: 24px
     }
 
@@ -396,15 +395,15 @@ body {
         border-radius: 30px;
     }
 
-    .modal-licat__text {
+    .text-modal {
         margin: 40px 0 10px;
     }
 
-    .modal-licat__text strong {
+    .text-modal strong {
         font-size: 46px;
     }
 
-    .modal-licat__text strong span {
+    .text-modal strong span {
         display: none;
     }
 
